@@ -52,11 +52,11 @@ variable "region" {
   description = "DigitalOcean region where the cluster will reside"
 }
 
-variable "replica_region" {
-  type        = string
-  default     = null
-  description = "DigitalOcean region where the replica will reside"
-}
+#variable "replica_region" {
+#  type        = string
+#  default     = null
+#  description = "DigitalOcean region where the replica will reside"
+#}
 
 variable "cluster_node_count" {
   type        = number

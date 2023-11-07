@@ -1,5 +1,5 @@
 module "labels" {
-  source      = "git::git@github.com:opz0/terraform-digitalocean-labels.git?ref=master"
+  source      = "git::https://github.com/opz0/terraform-digitalocean-labels.git?ref=v1.0.0"
   name        = var.name
   environment = var.environment
   managedby   = var.managedby
@@ -8,7 +8,7 @@ module "labels" {
 
 resource "digitalocean_database_cluster" "cluster" {
   count                = var.enabled == true ? 1 : 0
-  name                 = format("%s-${var.cluster_engine}", module.labels.id)
+  name                 = format("%s-sk${var.cluster_engine}", module.labels.id)
   engine               = var.cluster_engine
   version              = var.cluster_version
   size                 = var.cluster_size
