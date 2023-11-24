@@ -4,7 +4,7 @@ provider "digitalocean" {}
 
 
 module "vpc" {
-  source      = "git::https://github.com/opz0/terraform-digitalocean-vpc.git?ref=v1.0.0"
+  source      = "git::https://github.com/cypik/terraform-digitalocean-vpc.git?ref=v1.0.0"
   name        = "app"
   environment = "test"
   region      = "blr1"
