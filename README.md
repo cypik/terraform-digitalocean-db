@@ -23,7 +23,7 @@ You can use this module in your Terraform configuration like this:
 ```hcl
 
 module "mongodb" {
-  source                       = "git::https://github.com/opz0/terraform-digitalocean-db.git?ref=v1.0.0"
+  source                       = "git::https://github.com/cypik/terraform-digitalocean-db.git?ref=v1.0.0"
   name                         = "app"
   environment                  = "test"
   region                       = "blr1"
@@ -58,7 +58,7 @@ Please replace "your_database_cluster_id" with the actual ID of your DigitalOcea
 # Example: mysql
 ```hcl
 module "mysql" {
-  source             = "git::https://github.com/opz0/terraform-digitalocean-db.git?ref=v1.0.0"
+  source             = "git::https://github.com/cypik/terraform-digitalocean-db.git?ref=v1.0.0"
   name               = "app"
   environment        = "test"
   region             = "blr1"
@@ -95,7 +95,7 @@ module "mysql" {
 # Example: postgresql
 ```hcl
 module "postgresql" {
-  source                       = "git::https://github.com/opz0/terraform-digitalocean-db.git?ref=v1.0.0"
+  source                       = "git::https://github.com/cypik/terraform-digitalocean-db.git?ref=v1.0.0"
   name                         = local.name
   environment                  = local.environment
   region                       = local.region
@@ -139,7 +139,7 @@ module "postgresql" {
 # Example: redis
 ```hcl
 module "redis" {
-  source                       = "git::https://github.com/opz0/terraform-digitalocean-db.git?ref=v1.0.0"
+  source                       = "git::https://github.com/cypik/terraform-digitalocean-db.git?ref=v1.0.0"
   name                         = local.name
   environment                  = local.environment
   region                       = local.region
@@ -166,7 +166,7 @@ module "redis" {
 # Example: replica-db
 ```hcl
 module "mysql" {
-  source                       = "git::https://github.com/opz0/terraform-digitalocean-db.git?ref=v1.0.0"
+  source                       = "git::https://github.com/cypik/terraform-digitalocean-db.git?ref=v1.0.0"
   name                         = local.name
   environment                  = local.environment
   region                       = local.region
@@ -229,10 +229,10 @@ This module does not produce any outputs. It is primarily used for labeling reso
 - 'connection_pool_host' : Database replica's hostname.
 
 ## Examples
-For detailed examples on how to use this module, please refer to the 'examples' directory within this repository.
+For detailed examples on how to use this module, please refer to the [Examples](https://github.com/cypik/terraform-digitalocean-db/tree/master/_examples) directory within this repository.
 
 ## License
-This Terraform module is provided under the '[License Name]' License. Please see the [LICENSE](https://github.com/opz0/terraform-digitalocean-db/blob/master/LICENSE) file for more details.
+This Terraform module is provided under the '[License Name]' License. Please see the [LICENSE](https://github.com/cypik/terraform-digitalocean-db/blob/master/LICENSE) file for more details.
 
 ## Author
 Your Name
