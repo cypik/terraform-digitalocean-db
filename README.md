@@ -24,7 +24,7 @@ To use this module, you should have Terraform installed and configured for DIGIT
 ```hcl
 
 module "mongodb" {
-  source                       = "cypik/mongodb/digitalocean"
+  source                       = "cypik/db/digitalocean"
   version                      = "1.0.1"
   name                         = "app"
   environment                  = "test"
@@ -60,7 +60,7 @@ Please replace "your_database_cluster_id" with the actual ID of your DigitalOcea
 # Example: Mysql
 ```hcl
 module "mysql" {
-  source             = "cypik/mysql/digitalocean"
+  source             = "cypik/db/digitalocean"
   version            = "1.0.1"
   name               = "app"
   environment        = "test"
@@ -98,7 +98,7 @@ module "mysql" {
 # Example: postgresql
 ```hcl
 module "postgresql" {
-  source                       = "cypik/postgresql/digitalocean"
+  source                       = "cypik/db/digitalocean"
   version                      = "1.0.1"
   name                         = local.name
   environment                  = local.environment
@@ -143,7 +143,7 @@ module "postgresql" {
 # Example: Redis
 ```hcl
 module "redis" {
-  source                       = "cypik/redis/digitalocean"
+  source                       = "cypik/db/digitalocean"
   version                      = "1.0.1"
   name                         = local.name
   environment                  = local.environment
@@ -171,7 +171,7 @@ module "redis" {
 # Example: Replica-db
 ```hcl
 module "mysql" {
-  source                       = "cypik/mysql/digitalocean"
+  source                       = "cypik/db/digitalocean"
   version                      = "1.0.1"
   name                         = local.name
   environment                  = local.environment
