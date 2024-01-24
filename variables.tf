@@ -52,12 +52,6 @@ variable "region" {
   description = "DigitalOcean region where the cluster will reside"
 }
 
-#variable "replica_region" {
-#  type        = string
-#  default     = null
-#  description = "DigitalOcean region where the replica will reside"
-#}
-
 variable "cluster_node_count" {
   type        = number
   default     = 1
@@ -87,6 +81,7 @@ variable "cluster_maintenance" {
   default     = null
   description = "The day and the start hour of the maintenance window policy"
 }
+
 variable "backup_restore" {
   type        = map(string)
   default     = null
@@ -128,6 +123,7 @@ variable "firewall_rules" {
   default     = []
   description = "List of firewall rules associated with the cluster"
 }
+
 variable "project_id" {
   type        = string
   default     = null
