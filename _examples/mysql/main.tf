@@ -1,8 +1,6 @@
 provider "digitalocean" {}
 
 
-
-
 module "vpc" {
   source      = "cypik/vpc/digitalocean"
   version     = "1.0.1"
@@ -12,6 +10,8 @@ module "vpc" {
 
   ip_range = "10.31.0.0/24"
 }
+
+
 module "mysql" {
   source             = "../../"
   name               = "app"

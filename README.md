@@ -54,8 +54,6 @@ module "mongodb" {
   ]
 }
 ```
-Please replace "your_database_cluster_id" with the actual ID of your DigitalOcean DB, and adjust the db rules as needed.
-
 
 # Example: Mysql
 ```hcl

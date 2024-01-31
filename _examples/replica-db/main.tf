@@ -5,6 +5,7 @@ locals {
   environment = "test"
   region      = "blr1"
 }
+
 module "vpc" {
   source      = "cypik/vpc/digitalocean"
   version     = "1.0.1"
