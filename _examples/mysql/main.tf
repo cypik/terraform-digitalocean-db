@@ -1,16 +1,17 @@
 provider "digitalocean" {}
 
 
-
-
 module "vpc" {
-  source      = "git::https://github.com/cypik/terraform-digitalocean-vpc.git?ref=v1.0.0"
+  source      = "cypik/vpc/digitalocean"
+  version     = "1.0.1"
   name        = "app"
   environment = "test"
   region      = "blr1"
 
   ip_range = "10.31.0.0/24"
 }
+
+
 module "mysql" {
   source             = "../../"
   name               = "app"

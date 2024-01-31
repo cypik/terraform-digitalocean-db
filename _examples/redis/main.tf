@@ -7,7 +7,8 @@ locals {
 }
 
 module "vpc" {
-  source      = "git::https://github.com/cypik/terraform-digitalocean-vpc.git?ref=v1.0.0"
+  source      = "cypik/vpc/digitalocean"
+  version     = "1.0.1"
   name        = local.name
   environment = local.environment
   region      = local.region
