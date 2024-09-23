@@ -1,6 +1,6 @@
 module "labels" {
   source      = "cypik/labels/digitalocean"
-  version     = "1.0.1"
+  version     = "1.0.2"
   name        = var.name
   environment = var.environment
   managedby   = var.managedby
@@ -38,11 +38,11 @@ resource "digitalocean_database_cluster" "cluster" {
 }
 
 resource "digitalocean_database_db" "database" {
-  depends_on = [digitalocean_database_cluster.cluster]
-  count      = var.enabled == true ? length(var.databases) : 0
+  count = var.cluster_engine != "redis" ? length(var.databases) : 0  # Skip for Redis
   cluster_id = join("", digitalocean_database_cluster.cluster[*].id)
   name       = var.databases[count.index]
 }
+
 
 resource "digitalocean_database_user" "user" {
   for_each          = var.enabled == true && var.users != null ? { for u in var.users : u.name => u } : {}

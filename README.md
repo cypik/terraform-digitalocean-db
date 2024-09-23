@@ -25,12 +25,12 @@ To use this module, you should have Terraform installed and configured for DIGIT
 
 module "mongodb" {
   source                       = "cypik/db/digitalocean"
-  version                      = "1.0.1"
+  version                      = "1.0.2"
   name                         = "app"
   environment                  = "test"
   region                       = "blr1"
   cluster_engine               = "mongodb"
-  cluster_version              = "6"
+  cluster_version              = "7"
   cluster_size                 = "db-s-1vcpu-1gb"
   cluster_node_count           = 1
   cluster_private_network_uuid = module.vpc.id
@@ -59,7 +59,7 @@ module "mongodb" {
 ```hcl
 module "mysql" {
   source             = "cypik/db/digitalocean"
-  version            = "1.0.1"
+  version            = "1.0.2"
   name               = "app"
   environment        = "test"
   region             = "blr1"
@@ -147,7 +147,7 @@ module "redis" {
   environment                  = local.environment
   region                       = local.region
   cluster_engine               = "redis"
-  cluster_version              = "6"
+  cluster_version              = "7"
   cluster_size                 = "db-s-1vcpu-1gb"
   cluster_node_count           = 1
   cluster_private_network_uuid = module.vpc.id
