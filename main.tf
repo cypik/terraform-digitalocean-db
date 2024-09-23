@@ -38,7 +38,7 @@ resource "digitalocean_database_cluster" "cluster" {
 }
 
 resource "digitalocean_database_db" "database" {
-  count = var.cluster_engine != "redis" ? length(var.databases) : 0  # Skip for Redis
+  count      = var.cluster_engine != "redis" ? length(var.databases) : 0 # Skip for Redis
   cluster_id = join("", digitalocean_database_cluster.cluster[*].id)
   name       = var.databases[count.index]
 }

@@ -90,7 +90,7 @@ variable "backup_restore" {
 
 variable "databases" {
   type    = list(string)
-  default = ["db-name11"]  # Change this to a name that is not already used
+  default = ["db-name11"] # Change this to a name that is not already used
 }
 
 

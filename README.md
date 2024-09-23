@@ -221,20 +221,20 @@ This Terraform module is provided under the **MIT** License. Please see the [LIC
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.6.6 |
-| <a name="requirement_digitalocean"></a> [digitalocean](#requirement\_digitalocean) | >= 2.34.1 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.9.5 |
+| <a name="requirement_digitalocean"></a> [digitalocean](#requirement\_digitalocean) | >= 2.40.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_digitalocean"></a> [digitalocean](#provider\_digitalocean) | >= 2.34.1 |
+| <a name="provider_digitalocean"></a> [digitalocean](#provider\_digitalocean) | >= 2.40.0 |
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_labels"></a> [labels](#module\_labels) | cypik/labels/digitalocean | 1.0.1 |
+| <a name="module_labels"></a> [labels](#module\_labels) | cypik/labels/digitalocean | 1.0.2 |
 
 ## Resources
 
@@ -261,7 +261,7 @@ This Terraform module is provided under the **MIT** License. Please see the [LIC
 | <a name="input_cluster_version"></a> [cluster\_version](#input\_cluster\_version) | The version of the cluster | `string` | `""` | no |
 | <a name="input_create_firewall"></a> [create\_firewall](#input\_create\_firewall) | Controls if firewall should be created | `bool` | `false` | no |
 | <a name="input_create_pools"></a> [create\_pools](#input\_create\_pools) | Controls if pools should be created | `bool` | `false` | no |
-| <a name="input_databases"></a> [databases](#input\_databases) | A list of databases in the cluster | `list(string)` | `[]` | no |
+| <a name="input_databases"></a> [databases](#input\_databases) | n/a | `list(string)` | <pre>[<br>  "db-name11"<br>]</pre> | no |
 | <a name="input_enabled"></a> [enabled](#input\_enabled) | Flag to control the resources creation. | `bool` | `true` | no |
 | <a name="input_environment"></a> [environment](#input\_environment) | Environment (e.g. `prod`, `dev`, `staging`). | `string` | `""` | no |
 | <a name="input_firewall_rules"></a> [firewall\_rules](#input\_firewall\_rules) | List of firewall rules associated with the cluster | `list(map(string))` | `[]` | no |

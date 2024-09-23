@@ -21,7 +21,7 @@ module "redis" {
   environment                  = local.environment
   region                       = local.region
   cluster_engine               = "redis"
-  cluster_version              = "7"  # Ensure this version is valid
+  cluster_version              = "7" # Ensure this version is valid
   cluster_size                 = "db-s-1vcpu-1gb"
   cluster_node_count           = 1
   cluster_private_network_uuid = module.vpc.id
@@ -33,7 +33,7 @@ module "redis" {
     maintenance_day  = "saturday"
   }
 
-  create_firewall = false  # Adjust based on your use case
+  create_firewall = false # Adjust based on your use case
   firewall_rules = [
     {
       type  = "ip_addr"
