@@ -89,10 +89,10 @@ variable "backup_restore" {
 }
 
 variable "databases" {
-  type        = list(string)
-  default     = []
-  description = "A list of databases in the cluster"
+  type    = list(string)
+  default = ["db-name11"] # Change this to a name that is not already used
 }
+
 
 variable "users" {
   type        = list(map(string))

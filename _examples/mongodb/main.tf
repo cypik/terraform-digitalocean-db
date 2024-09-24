@@ -4,7 +4,7 @@ provider "digitalocean" {}
 
 module "vpc" {
   source      = "cypik/vpc/digitalocean"
-  version     = "1.0.1"
+  version     = "1.0.2"
   name        = "app"
   environment = "test"
   region      = "blr1"
@@ -12,7 +12,7 @@ module "vpc" {
 }
 
 module "mongodb" {
-  source                       = "../../"
+  source                       = "./../../"
   name                         = "app"
   environment                  = "test"
   region                       = "blr1"

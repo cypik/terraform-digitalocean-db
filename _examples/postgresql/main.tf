@@ -8,15 +8,15 @@ locals {
 
 module "vpc" {
   source      = "cypik/vpc/digitalocean"
-  version     = "1.0.1"
+  version     = "1.0.2"
   name        = local.name
   environment = local.environment
   region      = local.region
-  ip_range    = "10.10.0.0/24"
+  ip_range    = "10.11.0.0/24"
 }
 
 module "postgresql" {
-  source                       = "../../"
+  source                       = "./../../"
   name                         = local.name
   environment                  = local.environment
   region                       = local.region

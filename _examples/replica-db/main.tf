@@ -8,7 +8,7 @@ locals {
 
 module "vpc" {
   source      = "cypik/vpc/digitalocean"
-  version     = "1.0.1"
+  version     = "1.0.2"
   name        = local.name
   environment = local.environment
   region      = local.region
@@ -16,7 +16,7 @@ module "vpc" {
 }
 
 module "mysql" {
-  source                       = "../../"
+  source                       = "./../../"
   name                         = local.name
   environment                  = local.environment
   region                       = local.region
